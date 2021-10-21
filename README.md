@@ -1,6 +1,8 @@
 # GeoNet Help
 
-A repository for GeoNet help questions.  
+A repository for GeoNet help questions and to summarize significant changes on our data archive.
+
+If you need help or are experiencing problems when using our data, please create a new issue and provide details on your request.
 
 For help with GitHub issues please see:
 
