@@ -1,12 +1,12 @@
 # Location codes change
 
-This document provides details of a correction we have applied in 2021 to correctly represent location code of GeoNet strong motion (SM) stations.
-The change has been applied to data and metadata which have been corrected during 2021. 
+This document provides details of **Data/Metadata Legacy corrections** we have applied to correctly label the **location code** of **strong motion instruments** part of the GeoNet national network for periods of time between **2011 and 2020**.
+The change was applied to **data and metadata** from **27 seismic stations**  (in between June and October 2021) 
 
 You might be impacted by this change if you:
-- have a local copy of our data and/or metadata that is not up to date;
-- are using our data and metadata services while we apply the change;
-- are using a derived data product that has a mismatch in the metadata 
+- have a local copy of our data and/or metadata that is not up to date Prior to June/Oct 2021 ;
+- are using our data and metadata services while we apply the change Prior up to Oct 2021;
+- are using a derived data product that has a mismatch in the metadata (e.g. seismic pick label on a strong motion)
 
 
 ## Background
