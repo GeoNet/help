@@ -41,7 +41,8 @@ Data and metadata that are affected by this change are:
 - strong motion processed data (distributed via the Strong Motion Tool and archive)
 - seismic derived data: picks ID and magnitude ID (distributed via FDSN) might have metadata not correctly associated
 
-If you use strong motion miniseed data and metadata, you might be impacted by this change. The impact we expect can be of two forms:
+If you use strong motion miniseed data and metadata, you might be impacted by this change.
+Impacts are expected:
 - if you used and downloaded data between 2019 and 2021, you might not be able to retrieve the exact same dataset from the Geonet FDSN data service
  as it has been queried at that time
 - if you have a local copy of our data, some strong motion stream naming will differ with our GeoNet archive
