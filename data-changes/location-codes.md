@@ -1,18 +1,22 @@
 # Location codes change
 
 This document provides details of a number of corrections applied to miniseed data and associated metadata between June and October 2021. 
-Those have been applied to correctly label the location code of strong motion (SM) instruments part of the GeoNet national network for instrument changes that occurred between 2011 and 2020. The change was applied to data and metadata from 27 seismic stations. 
+Those have been applied to correctly label the location code of strong motion (SM) instruments part of the GeoNet national network for instrument changes that occurred between 2011 and 2020. The change was applied to both data and metadata from 27 seismic stations. 
 
 You might be impacted by this change if you:
 - have a local copy of our data and/or metadata that is not up to date;
 - are using a derived data product that may present a mismatch with the metadata (e.g. seismic pick label on a strong motion derived dataset)
+
+This type of archive change will still be carried out in the future as the need arises although to much smaller extent.
+
+_NB: This type of change in the archive only affects stream names: file headers only are modified_
 
 
 ## Background
 A 2 character _location code_ is used to uniquely identify different data streams at a single station. These identifiers are commonly used to logically separate multiple instruments or sensor sets at a single station.
 
 The International convention for miniseed format naming is available at [this link from the IRIS website](https://ds.iris.edu/ds/nodes/dmc/data/formats/seed/).  
-The GeoNet seismic stations Location codes naming convention is documented on [the GeoNet website](https://www.geonet.org.nz/data/supplementary/channels) with further details provided on the [GeoNet metadata repository](https://github.com/GeoNet/delta/blob/main/docs/SEISMIC_SITE_NAMING_CONVENTIONS.md).
+The GeoNet seismic stations Location codes naming convention is documented in [the GeoNet website](https://www.geonet.org.nz/data/supplementary/channels) with further details provided on the [GeoNet metadata repository](https://github.com/GeoNet/delta/blob/main/docs/SEISMIC_SITE_NAMING_CONVENTIONS.md).
 
 Based on these nomenclature conventions:
 - All GeoNet strong motion sensors have a location code `2?`
@@ -29,6 +33,7 @@ For 27 SM stations, location codes that were previously recorded as `20` are now
 
 Due to the complexity of this work, there has been sometimes and  for a limited period of time a mismatch between the metadata (that were correctly reporting 21) and the data in the archive. This has now been fixed.
 
+
 ### Affected data
 
 Data and metadata that are affected by this change are:
@@ -42,7 +47,7 @@ If you use strong motion miniseed data and metadata, you might be impacted by th
 In case you have a local copy, the following Impacts are expected:
 - if you used and downloaded data between 2019 and 2021, you might not be able to retrieve the exact same dataset from the Geonet FDSN data service
  as it has been queried at that time;
-- if you have a local copy of our data, some strong motion stream naming will differ with our GeoNet archive;
+- if you have a local copy of our data, some strong motion stream naming may now differ with our GeoNet archive;
 - if you have a pre-October 2021 upload of Geonet station metadata into a database or a software querying dataset from 2011 to 2020.
 
 In case you are querying GeoNet derived seismic data products (for example, earthquake products), a number of derived seismic data products were processed before June-October 2021, and have not been updated or reprocessed after the location code was corrected in the miniseed raw data and associated metadata. Those products might still refer to the old location code (namely `20`). For example, some events xml files (quakeML) or earthquake bulletins  might still have the former strong motion station streams naming with location code 20, although these streams do have a location code 21 from October 2021. 
