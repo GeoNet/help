@@ -8,7 +8,7 @@ Change in metadata will likely affect derived products such as Strong motion par
 
 ## Strong motion Obsidian 4x datalogger Response correction 
 station | streams | start | end | note
---|--|--|--
+--|--|--|--|--
 CTZ | HN/BN | 2021.329 (25 Nov) | ---* | secondary strong motion Correction 17 Feb 2022 ~Gain x4
 DCZ | HN/BN | 2015.295 (10 Oct) | 2021.221 (09 Aug)| secondary strong motion Correction 17 Feb 2022 ~Gain x4 
 FOZ | HN/BN | 2017.075 (16 Mar) | ---* | secondary strong motion Correction 17 Feb 2022 ~Gain x4 
