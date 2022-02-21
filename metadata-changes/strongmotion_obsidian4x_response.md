@@ -1,7 +1,7 @@
 # metadata Change/Correction
 
 This document provides details of correction applied to the metadata repository Delta.\
-Metadata services are accounting for these from the change implementation.
+Metadata services are accounting for these from the change implementation.\
 Users have to update their former metadata.\
 Change in metadata will likely affect derived products such as Strong motion parameters, magnitudes or localizations.
 
@@ -9,7 +9,7 @@ Change in metadata will likely affect derived products such as Strong motion par
 #### Correction 
 Applied 17 Feb 2022.\
 Response file was using an overall Gain 4 times lower than expected.\
-Former Gain: 4.201680e+05\ 
+Former Gain: 4.201680e+05\
 Corrected Gain: 1680672\
 Unit: Counts/m/s/s\
 Cf. https://github.com/GeoNet/delta/pull/1226
