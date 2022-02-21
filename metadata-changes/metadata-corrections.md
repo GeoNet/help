@@ -6,7 +6,7 @@ Users have to update their former metadata.
 Change in metadata will likely affect derived products such as Strong motion parameters, magnitudes or localizations
 
 
-# Strong motion Obsidian 4x datalogger Response correction 
+## Strong motion Obsidian 4x datalogger Response correction 
 station | start | end | note
 --|--|--|--
 CTZ | HN/BN | 2021.329 (25 Nov) | ---* | secondary strong motion Correction 17 Feb 2022 ~Gain x4
