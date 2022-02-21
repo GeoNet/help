@@ -8,4 +8,4 @@ If you would like more details, please open an issue and we will be happy to hel
 
 metadata change type | impacted dataset 
 -- | --
-[metadata corrections](metadata-corrections.md) | Deconvolved strong motion and strong motion products  
+[strongmotion_obsidian4x_response](strongmotion_obsidian4x_response.md) | Obsidian datalogger (10 sites) - Deconvolved strong motion and strong motion products - 2015/2022
