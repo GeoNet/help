@@ -1,20 +1,21 @@
-# metadata Change/Correction
+# Strong Motion datalogger (Obsidian 4x) response correction
 
-This document provides details of correction applied to the metadata repository Delta.\
-Metadata services are accounting for these from the change implementation.\
-Users have to update their former metadata.\
-Change in metadata will likely affect derived products such as Strong motion parameters, magnitudes or localizations.
+This document provides details of a correction applied to metadata of strong motion stations equipped with an Obsidian 4x datalogger. \
+The metadata correction has an impact on downstream strong motion products of those stations (10 sites in total). Products will reflect this change from the date the correction was implemented (February 2021), and we will endeavour to regenerate derived products to account for this.\
+We advise all our users to update their former metadata and results to account for this correction.\
+This metadata change will likely affect derived products such as Strong motion parameters, magnitudes or localizations.
 
-### Strong motion Obsidian4x datalogger Response correction 
-#### Correction 
-Applied 17 Feb 2022.\
-Response file was using an overall Gain 4 times lower than expected.\
+## Details of the correction applied
+The response file used for Obsidian dataloggers was using an overall Gain 4 times lower than expected.\
 Former Gain: 4.201680e+05\
 Corrected Gain: 1680672\
 Unit: Counts/m/s/s\
-Cf. https://github.com/GeoNet/delta/pull/1226
 
-#### Instrument list 
+The correction to our metadata was applied on 17 Feb 2022 (see also https://github.com/GeoNet/delta/pull/1226)
+
+We expect that datasets that have been affect by this are the deconvolved strong motion and strong motion products generated between 2015 and beginning of 2022.
+
+## List of affected sites and time windows
 station | streams | start | end | note
 --|--|--|--|--
 CTZ | HN/BN | 2021.329 (25 Nov) | ---\* | National site strong motion 
