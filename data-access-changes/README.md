@@ -1,4 +1,6 @@
-# FITS to Tilde Changes
+# Data Access Changes
+
+## FITS to Tilde
 
 With the move from FITS as the access point for GeoNet's low rate data to Tilde, all of the URLs that previously
 allowed users to retrieve data won't work, and a different URL will be required.
@@ -8,7 +10,7 @@ of particular relevance to users who use computer code to retrieve data, or who 
 FITS data queries. It includes only manually collected data (having the Tilde `Domain` of `manualcollect`). This 
 is currently restricted to a sub-set of data collected for volcano monitoring purposes.
 
-## FITS Data (Observation) Query
+### FITS Data (Observation) Query
 
 Refer to the [FITS API](https://fits.geonet.org.nz/api-docs/endpoint/observation) for more details.
 
@@ -22,7 +24,7 @@ The FITS API uses key and value pairs that can be in any order:
 - key is `methodID` to specify the method of data collecton, and value is `cont`.
 - key is `days` to specify the number of days of data requested, and value is `30`.
 
-## Tilde Data Query
+### Tilde Data Query
 
 Refer to the [Tilde API](https://tilde.geonet.org.nz/v3/api-docs/endpoint/data) for more details.
 
@@ -39,7 +41,7 @@ The Tilde API uses values without any key, and the values must be in a specific 
 - `-` to specify `Aspect`, which is a particular part or feature of a station or location. It is not used in this example so is set to `-`.
 - `latest/30d` to specify the date range of data requested, in this case, the latest 30 days.
 
-## Changes
+### Changes
 
 As well as the API differences, the move to Tilde has been accompanined by a number of changes to how the data are described. This is intended to provide more consistency, understanding, and readability in constructing data queries.
 For the earlier example:
