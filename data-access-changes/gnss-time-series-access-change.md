@@ -39,6 +39,13 @@ The Tilde API uses positional values, meaning the order of the values is critica
 
 As well as the API differences, the move to Tilde has been accompanined by a number of changes to how the data are described. This is intended to provide more consistency, understanding, and readability in constructing data queries.
 
+> Please be advised that with the transition from the FITS service to Tilde, a significant change has been implemented regarding displacement units for GNSS time series data.
+>
+> Displacement units are now reported in **meters (m)** within the Tilde service. Previously, in the FITS service, displacement units were reported in **millimeters (mm)**.
+>
+> Please adjust your data processing and analysis workflows accordingly
+
+
 For the earlier example:
 - FITS `siteID` and Tilde `Station` are both `WGTN` and they will be the same.
 - FITS `typeID` is `e`, while the equivalent Tilde `Aspect` is `east`.
