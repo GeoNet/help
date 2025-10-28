@@ -1,8 +1,5 @@
 # FDSN Station webservice
 
-> [!IMPORTANT]
-> This is a planned change, not implemented yet.
-
 ## Migration to StationXML 1.2 (October 2025)
 GeoNet's FDSN archive (`service.geonet.org.nz`) and near real-time (`service-nrt.geonet.org.nz`) webservices are migrated to the latest version of the [FDSN StationXML](https://www.fdsn.org/xml/station/) schema, version 1.2.
 
@@ -18,6 +15,7 @@ Key changes in the StationXML 1.2:
 - For low pass FIR filters, use gain at zero frequency (sum of coefficients)
 - Gain-only analog Stages should use PolesZeros with no poles or zeros
 - Gain-only digital Stages should use FIR with a single numerator of value 1
+- Do not require and disallow `<StageGain>` and `<Decimation>` for `<Polynomial>` response stages (particularly relevant for infrasound/pressure sensors/Tsunami Gauges)
 
 ## What you need to do
 We recommend users to review the official FDSN documentation and assess any potential impact on their systems or workflows.
