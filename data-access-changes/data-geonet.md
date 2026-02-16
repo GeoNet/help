@@ -1,7 +1,7 @@
 # data.geonet.org.nz
 
 > [!IMPORTANT]
-> This is a planned change, not implemented yet. We recommend users to read carefully and implement the recommended change as soon as possible to ensure a smooth transition once service will be upgraded.
+> This change will be implemented on **17 March 2026**. We recommend users to read carefully and implement the recommended change as soon as possible to ensure a smooth transition once service will be upgraded.
 
 ## data.geonet.org.nz transition
 The GeoNet data service at https://data.geonet.org.nz is undergoing a significant upgrade.
@@ -10,6 +10,11 @@ Users will need to make sure their application will continue to work during the 
 
 ### What is changing
 The new version of data.geonet.org.nz will introduced the following features:
+
+### New landing page
+Those using https://data.geonet.org.nz with their browser, will notice a new look of the landing page. The first page will show the Application Programmatic Interface documentation, a list of available endpoints (and links to related API-documentation) and a banner used for notices of upcoming/recent changes. The old landing page is now available under one of the endpoints ( https://data.geonet.org.nz/v1/data ). 
+No other noticeable changes have been implemented (besides the service being more responsive and browsing faster!).
+
 
 #### HTTPs Redirects
 > [!WARNING]
@@ -46,6 +51,8 @@ The current API (https://data.geonet.org.nz/_pathtofile_) will remain available 
 We will implement rate limiting measures in the new service. These are introduced to ensure consistent service availability, prevent service degradation caused by individual users, and enable the GeoNet programme to control costs of delivering the data.geonet.org.nz service.
 
 The main change is the implementation of a new Error Handling response for those clients exceeding a rate limit. This limit is calculated considering concurrent requests per minute per IP address.
+
+A client can get a rate limiting error if it sends too many simultanous requests at the same time (for example, if it has too many parallel downloads, or too many consecutive attempts during a short period of time).
 
 Clients exceeding the rate limiting will receive an HTTP `429` response error (too many requests). 
 
