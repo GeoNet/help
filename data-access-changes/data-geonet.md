@@ -1,15 +1,15 @@
 # data.geonet.org.nz
 
 > [!IMPORTANT]
-> This change will be implemented on **17 March 2026**. We recommend users to read carefully and implement the recommended change as soon as possible to ensure a smooth transition once service will be upgraded.
+> This change will be implemented on **17 March 2026**. We recommend users to read carefully and implement the recommended change as soon as possible to ensure a smooth transition once service is upgraded.
 
 ## data.geonet.org.nz transition
 The GeoNet data service at https://data.geonet.org.nz is undergoing a significant upgrade.
 This change will affect how clients access and interact with the API. 
-Users will need to make sure their application will continue to work during the service migration.
+Users need to make sure their application will continue to work during the service migration.
 
 ### What is changing
-The new version of data.geonet.org.nz will introduced the following features:
+The new version of data.geonet.org.nz introduces the following features:
 
 ### New landing page
 Those using https://data.geonet.org.nz with their browser, will notice a new look of the landing page. The first page will show the Application Programmatic Interface documentation, a list of available endpoints (and links to related API-documentation) and a banner used for notices of upcoming/recent changes. The old landing page is now available under one of the endpoints ( https://data.geonet.org.nz/v1/data ). 
@@ -25,7 +25,6 @@ Most clients will follow redirects by default. `curl` clients will need to add a
 We recommend to apply this change as soon as possible, it will work with the current and new data API service.
 
 
-
 #### New URL pattern
 The new service introduces a new URL structure, to allow future implementations of a data API.
 
@@ -38,10 +37,10 @@ will become
 https://data.geonet.org.nz/v1/data/_pathtofile_
 ```
 
-
 The following HTTPs status codes are introduced:
 - status code 301: moved permanently
 - status code 302: follow redirect
+
 
 #### Backward compatible API
 The current API (https://data.geonet.org.nz/_pathtofile_) will remain available for a limited time after the switchover. It will support redirects (`-L` flag) but will be deprecated in 2026.
@@ -64,4 +63,11 @@ To avoid triggering those rate limits, we recommend to modify your code so that:
 
 
 #### API documentation
-An entry page and API documentation will be added.
+An entry page and API documentation is added.
+
+
+### Change timeline overview
+
+This graph shows an indicative timeline of GeoNet Data API changes and actions users are recommended to take.
+
+![data-geonet](/data-access-changes/data-geonet.svg)
