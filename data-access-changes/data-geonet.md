@@ -71,3 +71,10 @@ An entry page and API documentation is added.
 This graph shows an indicative timeline of GeoNet Data API changes and actions users are recommended to take.
 
 ![data-geonet](/data-access-changes/data-geonet.svg)
+
+
+### Frequently asked questions
+
+The list below point to issues encountered by our users while preparing for the migration
+
+* [wget not correctly following redirect](https://github.com/GeoNet/help/issues/150)
