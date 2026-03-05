@@ -12,7 +12,7 @@ Users need to make sure their application will continue to work during the servi
 The new version of data.geonet.org.nz introduces the following features:
 
 ### New landing page
-Those using https://data.geonet.org.nz with their browser, will notice a new look of the landing page. The first page will show the Application Programmatic Interface documentation, a list of available endpoints (and links to related API-documentation) and a banner used for notices of upcoming/recent changes. The old landing page is now available under one of the endpoints ( https://data.geonet.org.nz/v1/data ). 
+Those using https://data.geonet.org.nz with their browser, will notice a new look of the landing page. The first page will show the Application Programmatic Interface documentation, a list of available endpoints (and links to related API-documentation) and a banner used for notices of upcoming/recent changes. The old landing page is now available under one of the endpoints ( https://data.geonet.org.nz/v1/data/ ). 
 No other noticeable changes have been implemented (besides the service being more responsive and browsing faster!).
 
 
@@ -43,11 +43,11 @@ The following HTTPs status codes are introduced:
 
 
 #### Backward compatible API
-The current API (https://data.geonet.org.nz/_pathtofile_) will remain available for a limited time after the switchover. It will support redirects (`-L` flag) but will be deprecated in 2026.
+The current API `https://data.geonet.org.nz/_pathtofile_` will remain available for a limited time after the switchover. It will support redirects (`-L` flag) but will be deprecated in late 2026.
 
 
 #### Rate limiting
-We will implement rate limiting measures in the new service. These are introduced to ensure consistent service availability, prevent service degradation caused by individual users, and enable the GeoNet programme to control costs of delivering the data.geonet.org.nz service.
+The new service implement rate limiting measures. These are introduced to ensure consistent service availability, prevent service degradation caused by individual users, and enable the GeoNet programme to control costs of delivering the data.geonet.org.nz service.
 
 The main change is the implementation of a new Error Handling response for those clients exceeding a rate limit. This limit is calculated considering concurrent requests per minute per IP address.
 
@@ -61,10 +61,25 @@ To avoid triggering those rate limits, we recommend to modify your code so that:
 - if such error is detected, a short delay between bulk queries is introduced;
 - if such error is detected, a retry logic with exponential backoff is introduced.
 
+#### Directory listing
+The new service implement enforcement of trailing slash when requesting directory listing, to make clear the distinction between listing and download requests.
+
+To avoid a "Not Found" error when using the API for listing, users will need to add a trailing slash `/` at the end of the URL.
+
+For example, to list the content of the `gnss` root folder, the user will need to use
+```
+https://gamma-data.geonet.org.nz/v1/data/gnss/
+```
+
+instead of 
+```
+https://gamma-data.geonet.org.nz/v1/data/gnss
+```
+that will now return a "Not Found" error. 
+
 
 #### API documentation
 An entry page and API documentation is added.
-
 
 ### Change timeline overview
 
@@ -78,3 +93,4 @@ This graph shows an indicative timeline of GeoNet Data API changes and actions u
 The list below point to issues encountered by our users while preparing for the migration
 
 * [wget not correctly following redirect](https://github.com/GeoNet/help/issues/150)
+* [directory listing not working](https://github.com/GeoNet/help/issues/152)
