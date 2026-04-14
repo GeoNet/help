@@ -14,6 +14,7 @@ access type | impacted dataset
 [FITS to Tilde](fits-to-tilde.md)  | generic time series data and general overview of the migration
 [FITS to Tilde volcano monitoring data](fits-to-tilde-mapping.pdf) | manually collected volcano monitoring data
 [FITS to Tilde GNSS time series](gnss-time-series-access-change.md) | GNSS time series data
+[GeoNet API](geonet-api.md) | API to query miscellanous data and information from GeoNet
 
 
 
